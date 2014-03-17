@@ -1,0 +1,4 @@
+c:\users\r\documents\visual studio 2013\Projects\Demo\Demo\bin\Debug\Demo.exe
+C:\Users\R\Documents\Visual Studio 2013\Projects\Demo\Demo\bin\Debug\Fizbin.Kinect.Gestures.dll
+C:\Users\R\documents\visual studio 2013\Projects\Demo\Demo\bin\Debug\Demo.exe.config
+C:\Users\R\Documents\GitHub\GrandpasThighs\Demo\Demo\bin\Debug\Demo.exe.config

@@ -1,0 +1,14 @@
+﻿<Window x:Class="Demo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="400" Width="525">
+    <Grid Loaded="Window_Loaded" Unloaded="Window_Unloaded" Height="366" VerticalAlignment="Top" HorizontalAlignment="Left" Width="515" Margin="0,0,-6,-4">
+        <Image x:Name="Image1" HorizontalAlignment="Left" Height="200" Margin="10,10,0,0" VerticalAlignment="Top" Width="200"/>
+        <Canvas HorizontalAlignment="Left" Height="230" Margin="274,10,0,0" VerticalAlignment="Top" Width="205" RenderTransformOrigin="0.424,0.483">
+            <Ellipse x:Name="right_hand_e" Fill="#FF0000F5" Height="49" Canvas.Left="123" Stroke="Black" Canvas.Top="92" Width="49"/>
+            <Ellipse x:Name="left_hand_e" Fill="Red" Height="49" Canvas.Left="31" Stroke="Black" Canvas.Top="92" Width="52" RenderTransformOrigin="-0.347,0.573"/>
+        </Canvas>
+        <TextBox x:Name="text1" HorizontalAlignment="Left" Height="23" Margin="167,298,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" IsReadOnlyCaretVisible="True"/>
+
+    </Grid>
+</Window>
