@@ -27,7 +27,7 @@ namespace Demo
     {
         KinectSensor myKinect;
         private GestureController controller;
-
+        
         Timer clear;
 
         public MainWindow()
@@ -90,6 +90,10 @@ namespace Demo
 
             Skeleton[] allSkeletons = new Skeleton[6];
             Skeleton player1;
+
+            var brush = new ImageBrush();
+            brush.ImageSource = new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this),"Images/USA52BlankBWPrint.png"));
+
             using (SkeletonFrame skeletonFrame = e.OpenSkeletonFrame()) 
             {
                 if (skeletonFrame == null) 
@@ -102,10 +106,12 @@ namespace Demo
                 player1 = (from s in allSkeletons
                            where s.TrackingState == SkeletonTrackingState.Tracked
                            select s).FirstOrDefault();
-                if (player1 == null) { return; }
+                if (player1 == null) { return; } 
 
                 setEllipsePosition(left_hand_e, player1.Joints[JointType.HandLeft]);
                 setEllipsePosition(right_hand_e, player1.Joints[JointType.HandRight]);
+
+                C.Background = brush;
 
                 controller.UpdateAllGestures(player1);
 

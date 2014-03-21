@@ -2,3 +2,20 @@ c:\users\r\documents\visual studio 2013\Projects\Demo\Demo\bin\Debug\Demo.exe
 C:\Users\R\Documents\Visual Studio 2013\Projects\Demo\Demo\bin\Debug\Fizbin.Kinect.Gestures.dll
 C:\Users\R\documents\visual studio 2013\Projects\Demo\Demo\bin\Debug\Demo.exe.config
 C:\Users\R\Documents\GitHub\GrandpasThighs\Demo\Demo\bin\Debug\Demo.exe.config
+C:\Users\R\Documents\GitHub\GrandpasThighs\Demo\Demo\bin\Debug\Demo.exe
+C:\Users\R\Documents\GitHub\GrandpasThighs\Demo\Demo\bin\Debug\Demo.pdb
+C:\Users\R\Documents\GitHub\GrandpasThighs\Demo\Demo\bin\Debug\Fizbin.Kinect.Gestures.dll
+C:\Users\R\Documents\GitHub\GrandpasThighs\Demo\Demo\bin\Debug\Microsoft.Kinect.Toolkit.dll
+C:\Users\R\Documents\GitHub\GrandpasThighs\Demo\Demo\bin\Debug\Microsoft.Samples.Kinect.WpfViewers.dll
+C:\Users\R\Documents\GitHub\GrandpasThighs\Demo\Demo\bin\Debug\Microsoft.Samples.Kinect.WpfViewers.pdb
+C:\Users\R\Documents\GitHub\GrandpasThighs\Demo\Demo\bin\Debug\Fizbin.Kinect.Gestures.pdb
+C:\Users\R\Documents\GitHub\GrandpasThighs\Demo\Demo\obj\Debug\Demo.csprojResolveAssemblyReference.cache
+C:\Users\R\Documents\GitHub\GrandpasThighs\Demo\Demo\obj\Debug\MainWindow.baml
+C:\Users\R\Documents\GitHub\GrandpasThighs\Demo\Demo\obj\Debug\MainWindow.g.cs
+C:\Users\R\Documents\GitHub\GrandpasThighs\Demo\Demo\obj\Debug\App.g.cs
+C:\Users\R\Documents\GitHub\GrandpasThighs\Demo\Demo\obj\Debug\Demo_MarkupCompile.cache
+C:\Users\R\Documents\GitHub\GrandpasThighs\Demo\Demo\obj\Debug\Demo.g.resources
+C:\Users\R\Documents\GitHub\GrandpasThighs\Demo\Demo\obj\Debug\Demo.Properties.Resources.resources
+C:\Users\R\Documents\GitHub\GrandpasThighs\Demo\Demo\obj\Debug\Demo.csproj.GenerateResource.Cache
+C:\Users\R\Documents\GitHub\GrandpasThighs\Demo\Demo\obj\Debug\Demo.exe
+C:\Users\R\Documents\GitHub\GrandpasThighs\Demo\Demo\obj\Debug\Demo.pdb
