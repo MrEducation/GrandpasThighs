@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.ComponentModel;
+using System.Collections;
 using Microsoft.Kinect;
 using Microsoft.Kinect.Toolkit;
 using Fizbin.Kinect.Gestures.Segments;
@@ -27,7 +28,7 @@ namespace Demo
     {
         KinectSensor myKinect;
         private GestureController controller;
-        
+        private MapDrawing maps;
         Timer clear;
 
         public MainWindow()
@@ -67,6 +68,10 @@ namespace Demo
 
             clear = new Timer(1000);
             clear.Elapsed += new ElapsedEventHandler(clearTimer);
+
+            maps = new MapDrawing();
+            maps.init();
+
         }
 
         void myKinect_ColorFrameReady(object sender, ColorImageFrameReadyEventArgs e)
@@ -90,9 +95,13 @@ namespace Demo
 
             Skeleton[] allSkeletons = new Skeleton[6];
             Skeleton player1;
+            String l;
+            String r;
 
-            var brush = new ImageBrush();
-            brush.ImageSource = new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this),"Images/USA52BlankBWPrint.png"));
+            //var brush = new ImageBrush();
+            //brush.ImageSource = new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this), "Images/BlankMap-USA-states-2000x1444.jpg"));
+
+            ImageBrush brush;
 
             using (SkeletonFrame skeletonFrame = e.OpenSkeletonFrame()) 
             {
@@ -106,23 +115,31 @@ namespace Demo
                 player1 = (from s in allSkeletons
                            where s.TrackingState == SkeletonTrackingState.Tracked
                            select s).FirstOrDefault();
-                if (player1 == null) { return; } 
+                if (player1 == null) { return; }
 
-                setEllipsePosition(left_hand_e, player1.Joints[JointType.HandLeft]);
-                setEllipsePosition(right_hand_e, player1.Joints[JointType.HandRight]);
+                setEllipsePosition(left_hand_e, player1.Joints[JointType.HandLeft], 375, 204);
+                setEllipsePosition(right_hand_e, player1.Joints[JointType.HandRight], 535, 204);
 
+
+                brush = maps.getImage(1);
                 C.Background = brush;
 
                 controller.UpdateAllGestures(player1);
 
                 text1.Text = Gesture;
+                l = "X:" + player1.Joints[JointType.HandLeft].Position.X.ToString() + " Y:" + player1.Joints[JointType.HandLeft].Position.Y.ToString();
+                r = "X:" + player1.Joints[JointType.HandRight].Position.X.ToString() + " Y:" + player1.Joints[JointType.HandRight].Position.Y.ToString();
+
+
+                left.Text = l;
+                right.Text = r;
             }
         }
        
-        private void setEllipsePosition(FrameworkElement ellipse, Joint j) 
+        private void setEllipsePosition(FrameworkElement ellipse, Joint j, int x_, int y_) 
         {
-            double scaledX = j.Position.X * ellipse.Width * 2;
-            double scaledY = j.Position.Y * ellipse.Height * -2;
+            double scaledX = (j.Position.X * ellipse.Width * 4) + x_;
+            double scaledY = (j.Position.Y * ellipse.Height * -4) + y_;
 
             Canvas.SetLeft(ellipse, scaledX);
             Canvas.SetTop(ellipse, scaledY);
@@ -226,6 +243,11 @@ namespace Demo
                 default:
                     break;
             }
+        }
+
+        void currentScreen() 
+        {
+            
         }
 
     }

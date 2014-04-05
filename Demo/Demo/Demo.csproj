@@ -71,6 +71,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MapDrawing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -111,7 +112,22 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\USA52BlankBWPrint.png" />
+    <Resource Include="Images\BlankMap-USA-states-2000x1444.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MidWest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\NorthEast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\south.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\west.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Pacific.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
